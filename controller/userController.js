@@ -2,11 +2,12 @@
 const projectmodel = require("../models/projectmodel")
 
 const create=async(req,res)=>{
-   let {name,technologies,link}=req.body;
+   let {name,description,technologies,link}=req.body;
    const technologie_arr=technologies.split(',');
     try{
         const project= await projectmodel.create({
             name,
+            description,
             technologies:technologie_arr,
             link
      })

@@ -2,6 +2,7 @@ const mongoose=require('mongoose');
 
 const projectSchema=mongoose.Schema({
     name:String,
+    description:String,
     technologies:{
         type:Array,
         default:[],
